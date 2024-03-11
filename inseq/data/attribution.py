@@ -324,6 +324,8 @@ class FeatureAttributionSequenceOutput(TensorWrapper, AggregableMixin):
         else:
             # print("------------------------------------", type(aggregated))
             print("------------------------------------",  aggregated )
+            print("------------------------------------aggregated.source_attributions",  aggregated.source_attributions)
+            print("------------------------------------aggregated.target_attributions",  aggregated.target_attributions)
             return show_attributions(aggregated, min_val, max_val, display, return_html)
 
     @property
