@@ -322,6 +322,7 @@ class FeatureAttributionSequenceOutput(TensorWrapper, AggregableMixin):
             tokens = "".join(tid.token for tid in self.target)
             logger.warning(f"Found empty attributions, skipping attribution matching generation: {tokens}")
         else:
+            print("------------------------------------", type(aggregated))
             return show_attributions(aggregated, min_val, max_val, display, return_html)
 
     @property
