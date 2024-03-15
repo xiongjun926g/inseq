@@ -88,6 +88,7 @@ class AbsMaxAggregationFunction(AggregationFunction):
 
 class VectorNormAggregationFunction(AggregationFunction):
     aggregation_function_name = "vnorm"
+    print('---------------scores in VectorNormAggregationFunction', scores)
 
     def __call__(self, scores: torch.Tensor, dim: int, vnorm_ord: int = 2) -> ScoreTensor:
         return vector_norm(scores, ord=vnorm_ord, dim=dim)
